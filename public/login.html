@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/android-chrome-512x512.png" type="image/png">
+    <link rel="icon" href="assets/android-chrome-192x192.png" type="image/png">
+    <link rel="icon" href="assets/favicon-32x32.png" type="image/png">
+    <link rel="icon" href="assets/favicon-16x16.png" type="image/png">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="manifest" href="assets/manifest.json">
+    <script src="index.js"></script>
+    <script src="login.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img class="picLogo" src="assets/logo.png" alt="logo">
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="index.html" id="homeLink" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="aboutUs.html" id="aboutUsLink" class="nav-link">Sobre</a></li>
+                    <li class="nav-item"><a href="register.html" id="registerLink" class="nav-link"> Registre-se</a></li>
+                    <li class="nav-item"><a href="login.html" id="loginLink" class="nav-link"> Entrar</a></li>
+                    <li class="nav-item"><a href="Voluntary.html" id="voluntaryLink" class="nav-link"> Seja voluntário</a></li>
+                </ul>
+            </div>
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="assets/menu_white_36dp.svg" alt=""></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="index.html" id="homeLink" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="AboutUs.html" id="aboutUsLink" class="nav-link">Sobre</a></li>
+                <li class="nav-item"><a href="register.html" id="registerLink" class="nav-link"> Registre-se</a></li>
+                <li class="nav-item"><a href="login.html" id="loginLink" class="nav-link"> Entrar</a></li>
+                <li class="nav-item"><a href="voluntary.html" id="voluntaryLink" class="nav-link"> Seja voluntário</a></li>
+            </ul>
+        </div>
+    </header>
+    <h1 class="titleLogin">Entrar</h1>
+    <div class="loginContent">
+        <form class="loginForm" id="loginForm" action="/auth/login" method="POST">
+            <input class="inputEmail" type="email" id="email" name="email" placeholder="Email" required>
+            <input class="inputPassword" type="password" id="password" name="password" placeholder="Senha" required>
+            <input class="login-button" type="submit" value="Entrar">
+        </form>
+        <p class="textLogin">Não tem uma conta? <a href="register.html" class="textLoginClick">Registre-se</a></p>
+        <div id="errorMessages" class="error"></div>
+    </div>
+    <footer>
+        <hr class="footer-line">
+        <p>Fale conosco através do E-mail:<br>
+        ongmindcare@gmail.com
+        </p>
+    </footer>
+</body>
+</html>

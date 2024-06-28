@@ -1,0 +1,40 @@
+#Configuração e Instalação
+Pré-requisitos
+Node.js
+MySQL
+
+Passos para Instalação
+1.Navegue até o diretório do projeto.
+2.Instale as dependências:
+npm install
+npm install express
+
+3.Configure o banco de dados MySQL. Crie um banco de dados chamado mind_care e adicione as tabelas necessárias:
+CREATE DATABASE mind_care;
+
+USE mind_care;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Psicologos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    phone VARCHAR(15) UNIQUE NOT NULL,
+    crp VARCHAR(50) UNIQUE NOT NULL,
+    specialty VARCHAR(255) NOT NULL
+);
+
+4.Configure as variáveis de ambiente no arquivo auth.js com as credenciais do seu banco de dados:
+DB_HOST=localhost
+DB_USER=seu-usuario
+DB_PASSWORD=sua-senha
+DB_NAME=mind_care
+
+5.Inicie o servidor:
+node app.js
